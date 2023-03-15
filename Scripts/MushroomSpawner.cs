@@ -8,12 +8,12 @@ public class MushroomSpawner : MonoBehaviour
     private float timer;
     public bool sendRight = true;
 
-    public float MaxY = 4f;
-    public float MinY = -4f;
+    public float MaxY = 7.0f;
+    public float MinY = -7.0f;
     // Start is called before the first frame update
     void Start()
     {
-        timer = Random.Range(.5f, 3f);
+        timer = Random.Range(1.0f, 3.0f);
         Instantiate(mushroom, transform.position, transform.rotation);
         
     }
@@ -23,9 +23,9 @@ public class MushroomSpawner : MonoBehaviour
     {
         timer -= Time.deltaTime;
         
-        if(timer <= 0f){
+        if(timer <= 0.0f){
             //reset timer
-            timer = Random.Range(.5f, 3f);
+            timer = Random.Range(1.0f, 3.0f);
         
             //set new y position for spawner
             float yPos = Random.Range(MinY,MaxY);
