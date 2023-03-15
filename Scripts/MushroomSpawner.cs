@@ -36,4 +36,6 @@ public class MushroomSpawner : MonoBehaviour
             newM.GetComponent<Mushroom>().goingRight = sendRight;
         }
     }
+
+    
 }

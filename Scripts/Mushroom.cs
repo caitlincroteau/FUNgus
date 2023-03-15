@@ -25,7 +25,7 @@ public class Mushroom : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Mushroom") {
+        if (other.gameObject.tag == "PedroPascal") {
             Destroy(other.gameObject);
         } 
     }
