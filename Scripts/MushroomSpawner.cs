@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MushroomSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject smallMushroom;
+    [SerializeField] private GameObject mushroom;
     private float timer;
     public bool sendRight = true;
 
@@ -14,7 +14,7 @@ public class MushroomSpawner : MonoBehaviour
     void Start()
     {
         timer = Random.Range(.5f, 3f);
-        Instantiate(smallMushroom, transform.position, transform.rotation);
+        Instantiate(mushroom, transform.position, transform.rotation);
         
     }
 
@@ -31,9 +31,9 @@ public class MushroomSpawner : MonoBehaviour
             float yPos = Random.Range(MinY,MaxY);
             transform.position = new Vector3 (transform.position.x, yPos, transform.position.z);
             
-            //spawn firefigher and set its direction
-            GameObject newSM = Instantiate(smallMushroom, transform.position, transform.rotation);
-            newSM.GetComponent<SmallMushroom>().goingRight = sendRight;
+            //spawn mushroom and set its direction
+            GameObject newM = Instantiate(mushroom, transform.position, transform.rotation);
+            newM.GetComponent<Mushroom>().goingRight = sendRight;
         }
     }
 }

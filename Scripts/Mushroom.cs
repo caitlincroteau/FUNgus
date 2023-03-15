@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallMushroom : MonoBehaviour
+public class Mushroom : MonoBehaviour
 {
     public float MushroomSpeed = 10f;
     public bool goingRight = true;
@@ -25,7 +25,7 @@ public class SmallMushroom : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "SmallMushroom") {
+        if (other.gameObject.tag == "Mushroom") {
             Destroy(other.gameObject);
         } 
     }

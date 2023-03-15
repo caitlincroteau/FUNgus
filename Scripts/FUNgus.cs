@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FUNgusScript : MonoBehaviour
+public class FUNgus : MonoBehaviour
 {   
     public float speed = 2.5f;
     Vector3 velocity = Vector3.zero;
