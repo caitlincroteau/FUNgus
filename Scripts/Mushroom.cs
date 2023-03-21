@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mushroom : MonoBehaviour
 {
-    public float MushroomSpeed = 10f;
+    public float MushroomSpeed = 8f;
     public bool goingRight = true;
     // Start is called before the first frame update
     void Start()
