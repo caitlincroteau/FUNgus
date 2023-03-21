@@ -6,6 +6,8 @@ public class Mushroom : MonoBehaviour
 {
     public float MushroomSpeed = 8f;
     public bool goingRight = true;
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,12 @@ public class Mushroom : MonoBehaviour
     
     {
         if(goingRight) {
+            //sprite image is default green mushroom
             transform.position += Vector3.right * MushroomSpeed * Time.deltaTime;
         } else {
             transform.position += Vector3.left * MushroomSpeed * Time.deltaTime;
+            //changes sprite image to red mushroom
+            ChangeSprite();
         }
         
     }
@@ -28,5 +33,9 @@ public class Mushroom : MonoBehaviour
         if (other.gameObject.tag == "PedroPascal") {
             Destroy(other.gameObject);
         } 
+    }
+
+    void ChangeSprite() {
+        spriteRenderer.sprite = newSprite;
     }
 }
