@@ -31,7 +31,8 @@ public class Mushroom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "PedroPascal") {
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
+            other.gameObject.transform.Rotate(0,0,-90);
         } 
     }
 
